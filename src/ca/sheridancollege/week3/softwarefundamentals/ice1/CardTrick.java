@@ -28,13 +28,12 @@ public class CardTrick {
             c.setSuit(Card.SUITS[newNumber]);
             magicHand[i] = c;
         }
-        System.out.print("Enter the card suit: ");
-        String cardSuit = sc.nextLine();
-        System.out.print("Enter the card number: ");
-        int cardNumber = sc.nextInt();
+        Card luckyCard = new Card();
+        luckyCard.setValue(3);
+        luckyCard.setSuit("Hearts");
         boolean cardFound = false;
         for(int i = 0; i < magicHand.length; i++) {
-            if(magicHand[i].getValue() == cardNumber && magicHand[i].getSuit().equals(cardSuit)) {
+            if(magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit().equals(luckyCard.getSuit)) {
                 System.out.println("Card found!");
                 System.out.println("Card Suit: "+ magicHand[i].getSuit());
                 System.out.println("Card Value: "+ magicHand[i].getValue());
